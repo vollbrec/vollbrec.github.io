@@ -1,0 +1,255 @@
+/* -- Variables -- */
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --gradient-top-color: rgba(209, 60, 60, 1);
+  --gradient-bottom-color: rgba(253, 144, 45, 1);
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+/* -- CSS Reset -- */
+* {
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+h1,
+a,
+img,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: var(--font);
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  border-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body,
+a,
+a:hover {
+  color: #000000;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  border: none;
+  border-style: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* -- Content -- */
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body.page-template-page-fullsingle-me {
+  height: 100vh;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: -0.5px;
+  color: var(--primary-color);
+  background: linear-gradient(
+    0deg,
+    var(--gradient-top-color) 0%,
+    var(--gradient-bottom-color) 100%
+  );
+
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url('../../images/hur_o.jpg');
+
+  background-position: center center;
+  background-size: cover;
+  margin: 0px;
+}
+
+body.page-template-page-fullsingle-me h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.fs-me {
+  padding: 10vh 10vw;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1000;
+}
+@media (max-width: 500px) {
+  .fs-me {
+    padding: 5vh 5vw;
+    text-align: center;
+  }
+}
+.fs-me .me-content {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  .fs-me .me-content {
+    height: 90vh;
+  }
+}
+
+.logo {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-item-align: left;
+  align-self: left;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+}
+
+@media (max-width: 500px) {
+  .logo {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+}
+
+.logo img {
+  max-width: 165px;
+  height: auto;
+}
+
+.bio {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-animation: fadein 4s;
+  animation: fadein 4s;
+  max-width: 66%;
+}
+
+@media (max-width: 800px) {
+  .bio {
+    max-width: none;
+  }
+}
+
+.network {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-animation: fadein 6s;
+  animation: fadein 6s;
+  margin-top: auto;
+}
+
+.network ul {
+  -webkit-animation: fadein 6s;
+  animation: fadein 6s;
+  margin-top: auto;
+}
+
+.network ul li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.network ul li a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.network ul li a .svg-icon {
+  padding: 4px;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  display: block;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.network ul li a .svg-icon path {
+  fill: var(--primary-color);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.network ul li a:hover .svg-icon path {
+  fill: var(--secondary-color);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
